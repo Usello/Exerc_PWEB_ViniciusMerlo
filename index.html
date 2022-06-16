@@ -1,0 +1,104 @@
+<!-- https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm -->
+<!-- Vinícius Gabriel Merlo - Informática III -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Casamento F&V</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+<body>
+
+
+<header class="container large bgimg cinza-1" id="home">
+  <div class="meio txt_branco centro">
+    <h1 class="font_big2">Flávia & Vinícius</h1>
+    <h2>Irão se casar em</h2>
+    <h2><b>29.06.2022</b></h2>
+  </div>
+</header>
+
+
+<div class="baixo">
+  <div class="barra branco centro padd min_opacidade opacidade_off">
+    <a href="#home" style="width:25%" class="item_bar botao">Início</a>
+    <a href="#us" style="width:25%" class="item_bar botao">Flávia & Vinícius</a>
+    <a href="#wedding" style="width:25%" class="item_bar botao">Casamento</a>
+    <a href="#rsvp" style="width:25%" class="item_bar botao preto-hov">Confirmar</a>
+  </div>
+</div>
+
+
+<div class="container_pai padd4 vermelho_pastel cinza-1" id="us">
+  <div class="conteudo">
+    <h1 class="centro txt_cinza"><b>Flávia & Vinícius</b></h1>
+    <img class="arrend cinza-1" src="/images/fv1.jpg" style="width:100%;margin:32px 0">
+    <p><i>Todos vocês nos conhecem como o casal bobo e apaixonado a quase um ano, com isso em mente e decidindo unificar de vez nossas vidas estaremos nos casando, sabemos que esta não é uma decisão tomada agora mas já vem sendo planejada a muito tempo, sabemos que o convite fica em cima da hora mas as vezes viver o momento ao invés de se limitar a pensamentos se torna muito mais valioso do que qualquer planejamento, bem, ao menos foi isso que aprendi vivendo cada dia ao lado desta linda mulher ❤️💍</i>
+    </p><br>
+    <p class="centro"><a href="#wedding" class="botao preto arrend padd2">Detalhes do Casamento</a></p>
+  </div>
+</div>
+
+
+<div class="container bgimg2">
+  <div class="meio txt_branco centro">
+    <h1 class="font_big2">Você está convidado</h1><br>
+    <h2>É claro..</h2>
+  </div>
+</div>
+
+<div class="container_pai padd4 vermelho_pastel cinza-1 centro" id="wedding">
+  <div class="conteudo">
+    <h1 class="txt_cinza"><b>O CASAMENTO</b></h1>
+    <img class="arrend_2 cinza-1" src="/images/Byodoin.jpg" style="width:100%;margin:64px 0">
+      <div class="metade">
+        <h2>Quando</h2>
+        <p>Cerimônia de casamento - 8:00pm</p>
+        <p>Recepção & Jantar - 11:00pm</p>
+      </div>
+      <div class="metade">
+        <h2>Onde</h2>
+        <p>Byōdō-in, Renge-116 Uji</p>
+        <p>Kyoto, Japão</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container_pai padd4 vermelho_pastel centro large" id="rsvp">
+  <h1>CONTAMOS COM SUA PRESENÇA!</h1>
+  <p>Gentilmente, confirme até 20.06.2022</p>
+  <p class="font_big">
+    <button onclick="document.getElementById('id01').style.display='block'" class="botao arrend vermelho opacidade opacidade_off" style="padding:8px 60px">Confirmar</button>
+  </p>
+</div>
+
+<div id="id01" class="modal">
+  <div class="conteudo_modal CC " style="padding:32px;max-width:600px">
+    <div class="container_pai branco centro">
+      <h1 class="large">VOCÊ PODE VIR?</h1>
+      <p>Nós ficaremos gratos se comparecer!</p>
+      <form>
+        <input class="input" type="text" placeholder="Nome(s)" name="name">
+      </form>
+      <p><i>Atenciosamente, Flávia & Vinícius</i></p>
+        <div class="metade">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="botao bloco verde">Eu vou! =)</button>
+        </div>
+        <div class="metade">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="botao bloco vermelho">Não poderei ir! =(</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="centro preto padd3">
+  <p>Fornecido por <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank">w3.css</a></p>
+</footer>
+<div style="margin-bottom:32px"> </div>
+
+</body>
+</html>

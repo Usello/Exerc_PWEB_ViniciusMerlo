@@ -1,0 +1,302 @@
+/* * está aplicando uma regra global que abrange todo nosso código, ela aplica nossa margem e padding para 0 e determina o tamanho da página para a borda da tela */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Determina que em body, h1 e h2 teremos a fonte Raleway como padrão*/
+body,h1,h2{
+	font-family: "Raleway", sans-serif;
+}
+/* Determina que a altura de todos os elementos do body e do html serão de 100%*/
+body, html {
+	height: 100%;
+}
+
+/* Determina que teremos um espaço de 2 entre as linhas de texto */
+p {
+	line-height: 2;
+}
+
+/* Deternmina a altura miníma, a posição da imagem e também o espaço que irá ocupar */
+.bgimg, .bgimg2 {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+/* Determina o link da imagem utilizada */
+.bgimg {
+	background-image: url("images/fv2.PNG");
+}
+/* Determina o link da imagem utilizada */
+.bgimg2 {
+	background-image: url("images/café.jpg");
+}
+
+/* Determina que para as tags button e input a fonte será herdada do body*/
+button,input{
+	font:inherit;
+}
+
+/* coloca um espaçamento de 4 pixeis entre cada letra */
+.large{
+	letter-spacing:4px;
+}
+/* Centraliza a tag image no meio */
+img{
+	vertical-align:middle;
+}
+/* Define que o A recebera a cor padrão da fonte definida */
+a{
+	color:inherit;
+}
+
+/* Aplica ao botão propriedades como não ter borda, estar presente em linha, padding com a propriedade vertical, alinhamento ao meio da tela, sem decorações no texto e com suas cores herdadas do container que se encontra */
+.botao{
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+/* Ajusta o posicionamento de forma relativa ao posicionamento original */
+.container{
+  position:relative;
+}
+
+/* Para o input temos um ajuste de padding que ajusta o "Container" interno em 8px, com um display em bloco, sem bordas, entretanto temos uma borda na parte inferior com apenas 1 pixel */
+.input{
+  padding:8px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #ccc;
+  width:100%;
+}
+/* Criação de uma caixa modal, ou seja, uma caixa com animação, onde utilizamos de z-index para definir sua prioridade, com padding superiorior ajustado para 100 px, sua autura e largura foram mantidos em 100%, justo com a tag overflow para que caso o texto seja maior que o container inserido ele transpace o container*/
+.modal{
+  z-index:3;
+  display:none;
+  padding-top:100px;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgb(0,0,0);
+  background-color:rgba(0,0,0,0.4);
+}
+/* ajustando o conteúdo modal  com uma margem automatizada e com posição relativa a original, fundo branco com padding zerado e altura e largura alterados*/
+.conteudo_modal{
+  margin:auto;
+  background-color:#fff;
+  position:relative;
+  padding:0;
+  width:600px; 
+  height:240px;
+}
+/* Aplica ao rodapé uma largura de 100% que recobre a pagina sem a possibilidade de textos escaparem dela*/
+.barra{
+  width:100%;
+  overflow:hidden;
+}
+
+/* Aplica ao rodapé e aos elementos centralizados o display em linha e largura automática*/
+.centro  .barra{
+  display:inline-block;
+  width:auto;
+}
+/* Aplica ao rodapé e aos elementos do mesmo o padding de 8 e 16 px, uma leve "flutuação" para esquerda, largura automática, nenhuma borda, display em bloco e sem nenhuma outline*/
+.barra .item_bar{
+  padding:8px 16px;
+  float:left;
+  width:auto;
+  border:none;
+  display:block;
+  outline:0;
+}
+/* Propriedades que definem o flutuamento para a esquerda junto da posição estática da barra*/
+.barra{
+  position:static;
+  float:left;
+}
+
+/* Define como o espaço em branco entre a barra e os botões irá se comportar, no caso ele estará normal */
+.barra, .botao{
+  white-space:normal;
+}
+
+/* define que os itens da rodapé teram largura de 100%, display em bloco junto de padding de 8 e 16px, textos alinhados ao centro e sem borda, com o espaço branco entre cada um sendo normal*/
+.item_bar{
+  width:100%;
+  display:block;
+  padding:8px 16px;
+  text-align:center;
+  border:none;
+  white-space:normal;
+  float:none;
+  outline:0;
+}
+
+/* Define que todos os elementos centralizados terão alinhamento ao centro*/
+.centro{
+  text-align:center;
+}
+
+/* Todos os elemntos do html que possuirem a classe bloco em sua composição serão dispostos em bloco com largura de 100% */
+.bloco{
+  display:block;
+  width:100%;
+}
+
+/* Define que após o container pai teremos um intervalo sem conteudo e o posicionamento da tabela com os horários e localização junto da propriedade  clear que especifica se um elemento pode ter elementos flutuantes ao seu lado ou se eles devem ser movidos para abaixo dele*/
+.container_pai:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* Define que os elementos com esta classe terão um flutuamente para a esquerda junto de uma largura de 50% */
+.metade{
+  float:left;
+	width:50%;
+}
+
+/* Define que o conteúdo tera ambas as margens definidas como automáticas com uma largura máxima de 980px*/
+.conteudo {
+  margin-left:auto;
+  margin-right:auto;
+	max-width:980px;
+}
+
+/* Define que os elementos que possuirem baixo em sua composição estarão fixos com largura de 100% e a "prioridade" do z-index sendo como 1*/
+.baixo {
+  position:fixed;
+  width:100%;
+  z-index:1;
+	bottom:0;
+}
+
+/* Elementos com a propriedade meio terão o posicionamento absoluto como "pai" tendo então um ajuste de 50% para o topo e para a esquerda, alinhando então o obejeto a 50%*/ 
+.meio {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+/*Define a borda circularizada de um elemento*/
+.arrend{
+  border-radius:4px;
+}
+/*Define a borda circularizada de um elemento*/
+.arrend_2{
+  border-radius:8px;
+}
+
+/* Define que o container_pai terá padding de 16 pixeis*/
+.container_pai {
+  padding: 16px;
+}
+
+/* Define que a sombra da caixa terá 5 e 10 pixeis com a cor preta*/
+.CC{
+  box-shadow:0 5px 10px 0 #000000,0 5px 20px 0 #000000;
+}
+
+/* Define a opacidade para o,5 */
+.opacidade{
+  opacity:0.50;
+}
+
+/* Define a opacidade para hover como 1 */
+.opacidade_off:hover{
+  opacity:1;
+}
+/* Define a opacidade minima para o,75 */
+.min_opacidade{
+  opacity:0.75;
+}
+
+/* define que a escala de cinza utilizada será de 50%*/
+.cinza-1{
+  filter:grayscale(50%);
+}
+/* Define que a fonte "grande" tera 24px diferente do normal*/
+.font_big{
+  font-size:24px;
+}
+/* Define que a fonte "grande"2 tera 64px diferente do normal*/
+.font_big2{
+  font-size:64px;
+}
+/* Define que o centro terá o texto alinhado ao centro*/
+.centro {
+  text-align:center;
+}
+/* Define que o padding desta classe será de 8px e 16px*/
+.padd{
+  padding:8px 16px;
+}
+/* Define que o padding desta classe será de 12px e 24px*/
+.padd2{
+  padding:12px 24px;
+}
+/* Define que o padding desta classe será de 16px e 16px*/
+.padd3{
+  padding-top:16px;
+  padding-bottom:16px;
+}
+/* Define que o padding desta classe será de 64px e 64px*/
+.padd4{
+  padding-top:64px;
+  padding-bottom:64px;
+}
+
+/* Define a cor do botão e seu background ao ativar o hover*/
+.botao:hover{
+  color:#000;
+  background-color:#ccc;
+}
+/* Define a cor branca como fundo de elementos que já possuam preto como padrão*/
+.branco{
+  color:#000;
+  background-color:#fff;
+}
+/* Define a cor preta como fundo de elementos que já possuam branco como padrão juntamente de preto como hover*/
+.preto,.preto-hov:hover{
+  color:#fff;
+  background-color:#000;
+}
+/* Define a cor branca como fundo de elementos que já possuam vermelho como padrão*/
+.vermelho{
+  color:#fff;
+  background-color:#f44336;
+}
+/* Define a cor preta como fundo de elementos que já possuam o vermelho pastel como padrão*/
+.vermelho_pastel{
+  color:#000;
+  background-color:#ffdddd;
+}
+
+/* Define a cor banca como fundo de elementos que já possuam o verde como padrão*/
+.verde{
+  color:#fff;
+  background-color:#4CAF50;
+}
+/* Define a cor branca para textos*/
+.txt_branco{
+  color:#fff;
+}
+/* Define a cor cinza para textos*/
+.txt_cinza{
+  color:#757575;
+}
